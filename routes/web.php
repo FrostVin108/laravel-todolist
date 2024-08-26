@@ -19,3 +19,10 @@ Route::get('/', function () {
 });
 
 Route::get('index', [HomeController::class, 'index'])->name('pegawai.index');
+
+Route::get('/create', function(){
+    return view('create');
+});
+
+Route::post('index', [ HomeController::class, 'store']
+)->name('pegawai.create');

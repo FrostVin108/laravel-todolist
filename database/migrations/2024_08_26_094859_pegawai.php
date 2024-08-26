@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nama_pegawai');
             $table->string('nomor_pegawai');
             $table->date('tanggal_bergabung');
+            $table->timestamps();
         });
 
     }
