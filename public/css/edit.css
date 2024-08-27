@@ -1,0 +1,152 @@
+.body-bg{
+    background-color: rgb(238, 238, 238);
+    box-sizing: border-box;
+    margin:0;
+}
+
+.side-navbar{
+    background-color: #192320;
+    min-height: 100vh;
+    width: 215px;
+    left: 100;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 23px;
+    box-shadow: 8px 10px 20px 8px rgba(87, 87, 87, 0.664);
+}
+
+.search-navbar{
+    background-color: rgb(165, 165, 165);
+    border: solid 1px black;
+    height: 30px;
+    width: 90%;
+    border-radius: 5px;
+    
+}
+
+/* card */
+.outside-card{
+    padding: 30px;
+}
+
+.card{
+    background-color: #ffffff;
+    width: 870px;
+    padding: 15px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 10px;
+    height: auto;
+}
+
+.flex-pemisah{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+
+
+
+.nama-style{
+    font-size: 21px;
+}
+
+.nama-input{
+    width: 700px;
+    height: 30px;
+    font-size: 17px;
+}
+
+.nomor-style{
+    font-size: 21px;
+}
+
+.nomor-input{
+    width: 700px;
+    height: 30px;
+    font-size: 17px;
+}
+
+.tanggal-style{
+    font-size: 21px;
+}
+
+.tanggal-input{
+    width: 160px;
+    height: 30px;
+    font-size: 17px;
+}
+
+
+
+
+
+
+.edit-input-position{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.button-position{
+    display: flex;
+    gap: 10px;
+    /* border: solid 1px yellow; */
+    align-items: center;
+    height: 50px;
+    padding: 10px;
+}
+
+.btn-update{
+    height: 40px;
+    background-color: rgb(0, 68, 255);
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 80px;
+    transition: 0.3s;
+
+}
+
+.btn-update:hover{
+    background-color: rgb(0, 153, 255) ;
+}
+
+.btn-reset{
+    height: 40px;
+    width: 80px;
+    background-color: rgb(28, 155, 2);
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn-reset:hover{
+    background-color: rgb(38, 218, 2);
+}
+
+.btn-return{
+    background-color: #b39307;
+    text-decoration: none;
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: 0.3s;
+    height: 20px;
+    padding: 10px;
+}
+
+.btn-return:hover{
+    background-color: #f0c518;
+
+}
