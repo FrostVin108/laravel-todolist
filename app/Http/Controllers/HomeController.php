@@ -57,4 +57,35 @@ class HomeController extends Controller
         //redirect to index
         return redirect()->route('pegawai.index')->with(['success' => 'Data Berhasil Dihapus!']);
     }
+
+    public function edit(string $id): View
+    {
+        //get post by ID
+        $pegawai = pegawai::findOrFail($id);
+
+        //render view with post
+        return view('edit', compact('pegawai'));
+    }
+
+    public function update(Request $request, $id): RedirectResponse
+    {
+        //validate form
+        $this->validate($request, [
+            'nama_pegawai'     => 'required',
+            'nomor_pegawai'     => 'required',
+            'tanggal_bergabung'   => 'required',
+        ]);
+
+        //get post by ID
+        $pegawai = pegawai::findOrFail($id);
+
+        $pegawai->update([
+            'nama_pegawai'     => $request->nama_pegawai,
+            'nomor_pegawai,'   => $request->nomor_pegawai,
+            'tanggal_bergabung'   => $request->tanggal_bergabung,
+        ]);
+         //redirect to index
+         return redirect()->route('pegawai.index')->with(['success' => 'Data Berhasil Diubah!']);
+        }
+
 }

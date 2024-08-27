@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('/css/index.css') }}" >
     <title>Document</title>
 </head>
 <body>
 
-<table style="border: 2px solid">
+<table class="table">
     <a href="{{route('pegawai.create')}}">Create</a>
     <thead>
         <tr>
@@ -27,8 +28,10 @@
                 <td>{{$pgw->nomor_pegawai}}</td>
                 <td>{{$pgw->tanggal_bergabung}}</td>
                 <td>
-                    <button>Edit</button>
+                    
                     <form method="POST" action="{{route('pegawai.delete', $pgw->id)}}" onsubmit="return confirm('Apakah Anda Yakin?');" >
+                        <a href="{{route('pegawai.edit', $pgw->id)}}">Edit</a>
+                        
                         @csrf
                         @method('delete')
                         <button type="submit">delete</button>

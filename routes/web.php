@@ -28,3 +28,7 @@ Route::post('index', [ HomeController::class, 'store']
 )->name('pegawai.store');
 
 Route::delete('delete/{id}', [HomeController::class, 'destroy'])->name('pegawai.delete');
+
+Route::get('edit/{id}', [HomeController::class, 'edit'])->name('pegawai.edit');
+
+Route::put('update/{id}', [HomeController::class, 'update'])->name('pegawai.update');
