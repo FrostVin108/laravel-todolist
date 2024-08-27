@@ -9,13 +9,14 @@
 <body>
 
 <table style="border: 2px solid">
+    <a href="{{route('pegawai.create')}}">Create</a>
     <thead>
         <tr>
-          <th scope="col">No</th>
-          <th scope="col">Nama Pegawai</th>
-          <th scope="col">Nomor Pegawai</th>
-          <th scope="col">Tanggal Bergabung</th>
-
+            <th scope="col">No</th>
+            <th scope="col">Nama Pegawai</th>
+            <th scope="col">Nomor Pegawai</th>
+            <th scope="col">Tanggal Bergabung</th>
+            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -25,7 +26,14 @@
                 <td>{{$pgw->nama_pegawai}}</td>
                 <td>{{$pgw->nomor_pegawai}}</td>
                 <td>{{$pgw->tanggal_bergabung}}</td>
-
+                <td>
+                    <button>Edit</button>
+                    <form method="POST" action="{{route('pegawai.delete', $pgw->id)}}" onsubmit="return confirm('Apakah Anda Yakin?');" >
+                        @csrf
+                        @method('delete')
+                        <button type="submit">delete</button>
+                    </form>
+                </td>
             </tr>
             @empty
             <div>

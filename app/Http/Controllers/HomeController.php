@@ -26,7 +26,7 @@ class HomeController extends Controller
 
      public function create(): View
      {
-        return view('pegawai.create');
+        return view('pegawai.store');
      }
 
     public function store(Request $request): RedirectResponse
@@ -44,5 +44,17 @@ class HomeController extends Controller
         ]);
         
         return redirect()->route('pegawai.index');
+    }
+
+    public function destroy($id): RedirectResponse
+    {
+        //get post by ID
+        $pegawai = pegawai::findOrFail($id);
+
+        //delete post
+        $pegawai->delete();
+
+        //redirect to index
+        return redirect()->route('pegawai.index')->with(['success' => 'Data Berhasil Dihapus!']);
     }
 }

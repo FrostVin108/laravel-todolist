@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="POST" action="{{ route('pegawai.create') }}">
+    <form method="POST" action="{{ route('pegawai.store') }}">
         @csrf
         @method('post')
             <div class="form-group">

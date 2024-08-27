@@ -22,7 +22,9 @@ Route::get('index', [HomeController::class, 'index'])->name('pegawai.index');
 
 Route::get('/create', function(){
     return view('create');
-});
+})->name('pegawai.create');
 
 Route::post('index', [ HomeController::class, 'store']
-)->name('pegawai.create');
+)->name('pegawai.store');
+
+Route::delete('delete/{id}', [HomeController::class, 'destroy'])->name('pegawai.delete');
